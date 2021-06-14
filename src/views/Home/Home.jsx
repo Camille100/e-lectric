@@ -35,7 +35,7 @@ function Home() {
                 <div className="texts">
                     <h1>L'entreprise</h1>
                     <p>
-                        Votre artisan électricien en Meuse, Moselle et Meurthe-et-Moselle, pour un dépannage ou une installation électrique de qualité.
+                        Votre artisan électricien  en Meuse, Moselle et Meurthe-et-Moselle, pour un dépannage ou une installation électrique de qualité.
                         J'étudie gratuitement et avec précision chaque projet en prenant compte de vos besoins et attentes, tout en respectant les normes en vigueur. *
                         
                     </p>
