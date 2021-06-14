@@ -1,0 +1,218 @@
+@import '../../assets/scss/styles.scss';
+
+.pageHome{
+	
+
+
+
+	.slogan{
+		display:flex;
+		position:relative;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+
+		background-image: url('../../assets/img/background.jpg');
+		background-repeat: no-repeat;
+        background-size: cover;
+		background-position: center center;
+
+		padding-top:80px;
+		text-align: center;
+
+		color: $off-white;
+
+		@include lg{
+			padding-top:50px;
+		}
+
+		a{
+			color: $off-white;
+		}
+
+
+		.texts{
+
+			h1{
+				font-size: 30px;
+				font-weight: 700;
+				line-height:38px;
+
+				@include lg{
+					font-size: 45px;
+					line-height:58px;
+					text-shadow: 0 0 5px rgba(0, 0,0,0.65);
+				}
+			}
+			h2{
+				font-size: 20px;
+				font-weight: 400;
+				margin-top:16px;
+				@include lg{
+					font-size: 30px;
+					text-shadow: 0 0 5px rgba(0, 0,0,0.65);
+				}
+			}
+
+		}
+
+		.button{
+			display: block;
+			margin-top:80px;
+			background-color: $off-white;
+			font-size: 20px;
+			border-radius: 15px;
+			padding: 17px 15px;
+			color: $primary-color;
+			font-weight: 700;
+			border: solid 2px $off-white;
+
+			&:hover{
+				background-color: $primary-color;
+				border-color: $primary-color;
+				color: $off-white;
+			}
+		}
+
+		.infos{
+			font-family: "Titillium Web", sans-serif;
+			margin-top:20px;
+			padding-bottom:80px;
+			padding-top:30px;
+			background: linear-gradient(to top, rgba(12, 31, 40) 50%, rgb(12, 31, 40, 0) 100%);
+			width:100%;
+
+			@include lg{
+				padding-bottom:50px;
+			}
+
+			h1{
+				font-weight: 700;
+                font-size: 30px;
+			}
+			a{
+				display: block;
+				margin-top:25px;
+
+				@include lg{}
+			}
+			p{
+				display: block;
+				margin-top:25px;
+				line-height:26px;
+			}
+		}
+
+	}
+
+
+	.entreprise{
+		display: flex;
+		flex-direction: column-reverse;
+
+		background-color: $primary-color;
+		color: $off-white;
+
+		@include lg{
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			max-width: 900px;
+			margin-left:auto;
+			margin-right:auto;
+
+			margin-top:70px;
+			margin-bottom:70px;
+			border-radius: 20px;
+		}
+
+		@include xl{
+			max-width: 1050px;
+			// height:460px;
+		}
+
+		.texts{
+
+			padding:40px 21px;
+
+			@include sm{
+				padding:60px 21px;
+			}
+
+			h1{
+				font-weight: 700;
+                font-size: 30px;
+				text-align: center;
+
+				@include md{
+					font-size: 34px;
+				}
+
+				@include rwd(1200){
+					font-size: 38px;
+				}
+			}
+			p{
+				font-weight: 500;
+				font-size: 17px;
+				text-align: center;
+				line-height: 30px;
+				margin-top:20px;
+
+				max-width: 360px;
+				margin-left:auto;
+				margin-right:auto;
+
+				@include sm{
+					margin-top:30px;
+
+				}
+
+				@include md{
+					line-height: 34px;
+					font-size: 19px;
+				}
+
+
+				@include xl{
+					line-height: 40px;
+					font-size: 20px;
+
+					max-width: 440px;
+				}
+
+			}
+		}
+
+		.images{
+
+			height:300px;
+			// background:orange;
+			overflow: hidden;
+
+			@include rwd(340){
+				height:350px;
+			}
+
+			@include lg{
+				width:350px;
+				height:350px;
+				margin-left:70px;
+				padding:40px 0;
+			}
+
+			@include xl{
+				width:400px;
+				height:400px;
+				margin-left:80px;
+			}
+
+			img{
+				width:100%;
+				height:100%;
+				object-fit: cover;
+			}
+		}
+	}
+
+}

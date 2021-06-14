@@ -1,0 +1,149 @@
+@import '../../assets/scss/styles.scss';
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap');
+
+#navbar{
+	position:fixed;
+	height:80px;
+	top:0;
+	left:0;
+	right:0;
+	background:$primary-color;
+	z-index: 2000000000;
+
+	#navbarWrapper{
+		height:100%;
+		display:flex;
+		justify-content: space-between;
+		align-items: center;
+
+		max-width: 1400px;
+		margin-left:auto;
+		margin-right:auto;
+		
+		padding:0 15px;
+		position:relative;
+
+		@include md{
+			padding:0 25px;
+		}
+
+		.logo{
+			display:flex;
+			flex-direction: column;
+			align-items: center;
+			h1{
+				font-family: 'Titillium Web', sans-serif;
+				color:$off-white;
+				font-weight: 800;
+				font-size: 20px;
+				letter-spacing: 2px;
+
+				@include lg{
+					font-size: 30px;
+					letter-spacing: 3px;
+				}
+			}
+			img{
+				width: 40px;
+				margin-top:3px;
+
+				@include lg{
+					width: 70px;
+					margin-top:0px;
+				}
+			}
+		}
+
+		.menu{
+			display:flex;
+			align-items: center;
+			
+			// background:chocolate;
+
+			.menuMobile{
+				transition: all 200ms ease-in-out;
+				opacity:0;
+				transform: translateX(100vw);
+				margin:unset;
+
+				left:0;
+				right:0;
+				width:100%;
+				background:red;
+
+				position:absolute;
+				top:80px;
+
+				padding-bottom: 30px;
+				background-color: $primary-color;
+
+				li{
+					padding-top: 20px;
+                    padding-bottom: 20px;
+					text-align: center;
+					a{
+						color: $off-white;
+                        font-size: 25px;
+                        font-weight: 500;	
+					}
+				}
+
+			}
+
+			.menuDesktop{
+				display:none;
+				margin-right:40px;
+
+				@include lg{display: flex;}
+
+				li{
+					margin-left: 25px;
+
+					&:first-child{
+						margin-left:unset;
+					}
+					
+					a{
+						color: $off-white;
+						font-weight: 500;
+						font-size: 18px;
+					}
+				}
+			}
+
+
+			.icons{
+				display: block;
+				height:20px;
+				width:20px;
+				margin-left:26px;
+
+				&:nth-child(2){margin-left:unset;}
+
+				@include lg{
+					margin-left:unset;
+				}
+
+				svg{
+					width:100%;
+					height:100%;
+				}
+
+			}
+			.navbar-burger{
+				height:26px;
+				width:26px;
+
+				@include lg{
+					display:none;
+				}
+			}
+	
+		}
+	
+
+
+	}
+
+
+}
