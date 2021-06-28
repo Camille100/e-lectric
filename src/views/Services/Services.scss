@@ -1,8 +1,210 @@
 @import '../../assets/scss/styles.scss';
 
 .services {
-    position: relative;
+
     display: flex;
     flex-direction: column;
-    top: 110px;
+    justify-content: center;
+    align-items: center;
+
+    line-height: 25px;
+    letter-spacing: 0.5px;
+
+    @include md {
+        margin-bottom: 50px;
+        line-height: 28px;
+    }
+
+    @include xl {
+        line-height: 32px;
+    }
+
+    .Service-card {
+
+        margin-top: 40px;
+       //margin-bottom: 20px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        text-align: center;
+
+        width: 100%;
+
+        @include md {
+            max-width: 900px;
+            flex-direction: row;
+
+            margin-top: 60px;
+            margin-bottom: 60px;
+
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+        }
+
+        @include xl {
+            max-width: 1400px;
+        }
+
+        .service-text {
+            margin: 20px 20px;
+
+            @include md {
+                max-width: 50%;
+            }
+
+            h1 {
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 30px;
+                padding: 0px 3px;
+
+                @include md {
+                    font-size: 23px;
+                }
+
+                @include xl {
+                    font-size: 27px;
+                    margin-bottom: 50px;
+                }
+            }
+
+            .description {
+                h2 {
+                    font-size: 15px;
+                    font-weight: 700;
+                    margin-bottom: 20px;
+                    
+                    
+                    @include md {
+                        text-align: left;
+                    }
+
+                    @include xl {
+                        font-size: 17px;
+                    }
+                }
+                p {
+                    margin-bottom: 15px;
+
+                    font-size: 15px;
+                    font-weight: 400;
+
+                    @include md {
+                        text-align: left;     
+                    }
+
+                    @include xl {
+                        font-size: 17px;
+                    }
+                }
+
+                ul {
+                    text-align: left;
+                    
+                    li {
+                        list-style-image: url('../../assets/img/svgs/lightning.svg');
+                        margin-left: 20px;
+
+                        font-size: 15px;
+                        font-weight: 400;
+
+
+                        @include xl {
+                            font-size: 17px;
+                        }
+                    }
+                }
+
+                .astuce {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    
+
+                    @include md {
+                        flex-direction: row;
+                        align-items: flex-start;
+                    }
+
+                    svg {
+                        width: 50px;
+                        margin-bottom: 20px;
+
+                        @include md {
+                            margin-right: 15px;
+                        }
+                    }
+
+                    p {
+                        max-width: 80%;
+                    }
+                }
+            }
+
+            .renovation {
+                span {
+
+                background: #f5b184;
+                background: -webkit-linear-gradient(to top, #f5b184 40%, #ffffff00 40%rgba(255, 255, 255, 0)FF 100%, #f5b184 100%);
+                background: -moz-linear-gradient(to top, #f5b184 40%, #ffffff00 40%rgba(255, 255, 255, 0)FF 100%, #f5b184 100%);
+                background: linear-gradient(to top, #f5b184 40%, #ffffff00 40%, #ffffff00 100%, #f5b184 100%);
+
+
+                }
+
+            }
+
+            .installation {
+                span {
+                    padding: 0px 3px;
+                    margin: 0;
+                    background: #a6b6d0;
+                    background: -webkit-linear-gradient(to top, #a6b6d0 40%, #ffffff00 40%rgba(255, 255, 255, 0)FF 100%, #a6b6d0 100%);
+                    background: -moz-linear-gradient(to top, #a6b6d0 40%, #ffffff00 40%rgba(255, 255, 255, 0)FF 100%, #a6b6d0 100%);
+                    background: linear-gradient(to top, #a6b6d0 40%, #ffffff00 40%, #ffffff00 100%, #a6b6d0 100%);
+                    }
+
+            }
+
+            .domotique {
+                span {
+                    padding: 0px 3px;
+                    margin: 0;
+                    background: #9fc9e2;
+                    background: -webkit-linear-gradient(to top, #9fc9e2 40%, #ffffff00 40%rgba(255, 255, 255, 0)FF 100%, #9fc9e2 100%);
+                    background: -moz-linear-gradient(to top, #9fc9e2 40%, #ffffff00 40%rgba(255, 255, 255, 0)FF 100%, #9fc9e2 100%);
+                    background: linear-gradient(to top, #9fc9e2 40%, #ffffff00 40%, #ffffff00 100%, #9fc9e2 100%);
+                    }
+
+            }
+
+            .depannage {
+                span {
+                    padding: 0px 3px;
+                    margin: 0;
+                    background: #ec8986;
+                    background: -webkit-linear-gradient(to top, #ec8986 40%, #ffffff00 40%rgba(255, 255, 255, 0)FF 100%, #ec8986 100%);
+                    background: -moz-linear-gradient(to top, #ec8986 40%, #ffffff00 40%rgba(255, 255, 255, 0)FF 100%, #ec8986 100%);
+                    background: linear-gradient(to top, #ec8986 40%, #ffffff00 40%, #ffffff00 100%, #ec8986 100%);
+                    }
+
+            }
+        }
+
+        img {
+            width: 100%;
+
+            @include md {
+                width: 400px;
+            }
+    
+            @include xl {
+                width: 600px;
+            }
+        }
+    } 
 }

@@ -3,9 +3,11 @@ import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import './assets/scss/index.scss'
 
 import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 import Home from './views/Home/Home';
 import Services from './views/Services/Services'
 import Projets from './views/Projets/Projets'
+import Projet from './views/Projet/Projet'
 import Contact from './views/Contact/Contact'
 
 function App() {
@@ -20,6 +22,9 @@ function App() {
           <Route path='/projets'>
             <Projets />
           </Route>
+          <Route path='/projet/:id'>
+            <Projet />
+          </Route>
           <Route path='/contact'>
             <Contact />
           </Route>
@@ -27,7 +32,9 @@ function App() {
             <Home />
           </Route>
         </Switch>
+        <Footer />
       </Router>
+      
     </main>
   );
 }

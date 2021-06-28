@@ -1,0 +1,206 @@
+@import '../../assets/scss/styles.scss';
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+
+
+.Projet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    min-height: calc(100vh - 350px);
+    
+    .projet-container {
+        width: 100%;
+        max-width: 900px;
+
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+        font-size: 15px;
+        letter-spacing: 0.8px;
+        line-height: 20px;
+
+        color: $secondary-color;
+
+        margin: 50px 0px;
+
+        @include sm {
+            font-size: 17px;
+        }
+
+        @include lg {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .projet-galerie {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            
+            
+            max-width: 500px;
+
+            @include sm {
+                max-width: unset;
+            }
+
+            @include lg {
+                justify-content: flex-start;
+            }
+    
+            
+        }
+
+        //////////////////////////////////////////////// galerie /////////////////////////////////////////////////
+        .image-gallery {
+            overflow: hidden;
+            width: 100%;
+            box-sizing: border-box;
+            .image-gallery-image {
+                width: 250px;
+                height: 250px;
+            
+                object-fit: cover;
+                @include sm {
+                    width: 500px;
+                    height: 500px;
+                }
+            }
+
+            .image-gallery-thumbnail {
+                width: 80px;
+            }
+            .image-gallery-thumbnails-container {
+                display: flex; 
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+
+                margin-right: auto;
+                margin-left: auto;
+            
+                width: 250px;
+                @include sm {
+                    width: 520px;
+                }
+            }
+            button {
+                svg {
+                    width: 20px;
+
+                }
+            }
+
+            .image-gallery-thumbnail-image {
+                object-fit: cover;
+            }
+        }
+        
+        
+        //////////////////////////////////////////////// galerie /////////////////////////////////////////////////
+      
+        .projet-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: 50px;
+
+            width: 100%;
+            max-width: 250px;
+
+            background-color: white;
+            border-radius: 5px;
+
+            @include sm {
+                max-width: 500px;
+            }
+
+            @include lg {
+                margin-top: 0px;
+                max-width: 350px;
+            }
+
+            .projet-infos {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                align-self: flex-start;
+
+                padding-top: 15px;
+                padding-left: 15px;
+
+                margin-top: 20px;
+                margin-bottom: 15px;
+
+                @include sm {
+                    flex-direction: row;
+                    padding-left: 25px;
+                }
+
+                @include lg {
+                    flex-direction: column;
+                }
+
+                .projet-info {
+                    display: grid;
+                    grid-template-columns: 40px 1fr;
+
+                    align-items: center;
+
+                    margin-bottom: 15px;
+
+                    @include sm {
+                        margin-right: 20px;
+                    }
+
+                    svg {
+                        width: 20px;
+
+                        @include sm {
+                            width: 30px;
+                        }
+                    }
+                   
+                                
+                }
+            }
+
+            .projet-description {
+                
+                margin-bottom: 20px;
+                h2 {
+                    text-align: left;
+                    margin-left: 30px;
+                    margin: 5px 10px;
+                    font-size: 15px;
+                    color: $primary-color;
+                    @include sm {
+                        margin: 20px 10px 10px 35px;
+                        
+                        font-size: 20px;
+                    }
+                    
+                }
+                p {
+                    text-align: left;
+                    padding: 30px;
+                    @include sm {
+                        padding: 35px;
+                    }
+                }
+            }
+        }
+    }
+}
+

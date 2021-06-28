@@ -1,0 +1,68 @@
+@import '../../assets/scss/styles.scss';
+
+.CardProjets {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 20px;
+    overflow: hidden;
+
+    cursor: pointer;
+
+    font-family: Titillium Web;
+    
+    img {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        @include sm {
+            width: 250px;
+            height: 250px;
+        }
+        @include lg {
+            width: 350px;
+            height: 350px;
+        }
+    }
+     
+    .calque {
+        position: absolute;
+        overflow: hidden;
+
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 200px;
+        height: 200px;
+
+            text-align: center;
+
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+
+            color: $off-white;
+            background-color: rgba(0, 0, 0, 0.342);
+
+            transform: translateY(500px);
+            transition: transform 0.3s ease-in-out;
+
+            @include sm {
+                width: 250px;
+                height: 250px;
+            }
+            @include lg {
+                width: 350px;
+                height: 350px;
+            }
+        }
+    }
+    .calque:hover p {
+        transform: translateY(0px);
+    }
+}

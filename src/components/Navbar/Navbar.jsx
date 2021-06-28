@@ -8,27 +8,29 @@ import './Navbar.scss';
 import logo from '../../assets/img/logo.png'
 
 
-const MenuLiens = () => {
-	return(
-		<>
-			<li>
-				<Link to='/'>Accueil</Link>
-			</li>
-			<li>
-				<Link to='/services'>Services</Link>
-			</li>
-			<li>
-				<Link to='/projets'>Projets réalisés</Link>
-			</li>
-			<li>
-				<Link to='/contact'>Contact</Link>
-			</li>
-		</>
-	)
-}
+
 
 
 function Navbar() {
+
+	const MenuLiens = () => {
+		return(
+			<>
+				<li>
+					<Link to='/' onClick={() => setDisplayMenu(false)}>Accueil</Link>
+				</li>
+				<li>
+					<Link to='/services' onClick={() => setDisplayMenu(false)}>Services</Link>
+				</li>
+				<li>
+					<Link to='/projets' onClick={() => setDisplayMenu(false)}>Projets réalisés</Link>
+				</li>
+				<li>
+					<Link to='/contact' onClick={() => setDisplayMenu(false)}>Contact</Link>
+				</li>
+			</>
+		)
+	}
 
     const [displayMenu, setDisplayMenu] = useState(false);
 
@@ -63,10 +65,10 @@ function Navbar() {
 		<div id="navbar">
 			<div id="navbarWrapper">
 				
-				<div className="logo">
+				<Link to='/' onClick={() => setDisplayMenu(false)} className="logo">
 					<h1>ELECTR-IC</h1>
 					<img src={logo} alt="Logo ELECTR-IC" />
-				</div>
+				</Link>
 
 
 				<div className="menu">

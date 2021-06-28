@@ -1,8 +1,230 @@
 @import '../../assets/scss/styles.scss';
 
 .contact {
-    position: relative;
     display: flex;
     flex-direction: column;
-    top: 110px;
+    color: #6d6d6d;
+    min-height: calc(100vh - 350px);
+    
+    .contact-presentation-txt {
+
+        margin-top: 50px;
+        margin-bottom: 15px;
+        margin-right: auto;
+        margin-left: auto;
+
+        width: 250px;
+        
+
+        @include sm {
+            width: 350px;
+        }
+        @include lg {
+            width: 500px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #383a3b;
+            font-size: 27px;
+        }
+        p {
+            text-align: center;
+
+            font-size: 14px;
+            line-height: 25px;
+            letter-spacing: 0.5px;
+            
+        }
+    }
+    .contact-all {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        font-family: Titillium Web;
+
+        width: 100%;
+
+        @include lg {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            margin-top: 40px;
+            margin-bottom: 60px;
+            margin-left: auto;
+            margin-right: auto;
+            
+            max-width: 850px;
+        }
+        .contact-infos-form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 250px;
+
+            margin-bottom: 50px;
+
+            font-size: 15px;
+
+            background-color: white;
+            border-radius: 5px;
+
+            @include sm {
+                width: 350px;
+                
+            }
+
+            @include lg {
+                align-items: flex-start;
+                width: 300px;
+                margin-bottom: 0;
+                margin-bottom: 0;
+            }
+
+            h1 {
+                text-align: center;
+                font-size: 18px;
+                
+                padding: 20px 15px 10px 25px;
+
+                color: #383a3b;
+
+            }
+            .contact-container {
+                padding: 0px 25px;
+            
+                .contact-both {
+                    display: grid;
+                    grid-template-columns: 14px 1fr;
+                    align-items: flex-start;
+
+                    margin-top: 15px;
+                    
+                    svg {
+                        width: 15px;
+                    
+                    }
+
+                    p {
+                        margin-left: 15px;
+                    }
+                }
+            }
+
+            .map-container {
+                margin-top: 30px;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        
+
+        .contact-form {
+
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                width: 250px;
+
+                margin-bottom: 60px;
+
+                
+            @include sm {
+                width: 350px;
+                
+            }
+            @include lg {
+                width: 500px;
+                margin-bottom: 0;
+            }
+                .inputs {
+                    width: 100%;
+                    padding: 7px;
+                    margin: 5px 0px;
+
+                    border: none;
+                    border-radius: 3px;
+                    box-shadow: 1px 1px 5px 1px #D1D1D1;
+                    box-sizing: border-box;
+
+                    font-size: 17px;
+                    font-family: Titillium Web;
+                    letter-spacing: 0.7px;
+                }
+
+                .name-input {
+                    @include lg {
+                        margin-top: 0;
+                    }
+
+                }
+                .contact-infos {
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                
+                    width: 100%;
+
+                    @include lg {
+                        flex-direction: row;
+                        align-items: space-around;
+                    }
+                    
+                    .tel-input {
+                    @include lg {
+                        margin-right: 10px;
+                    }
+                    }
+
+                    .mail-input {
+
+            
+                    
+                    }
+                }
+
+                .message-input {
+                    
+                }
+
+                p {
+                    align-self: flex-start;
+                    font-size: 12px;
+
+                    margin-bottom: 15px;
+
+                    span {
+                        font-size: 20px;
+                    }
+                }
+
+                .submit-btn {
+                background-color: #e6120b;
+                border: none;
+                color: $off-white;
+
+                font-weight: 700;
+
+                cursor: pointer;
+                }
+
+                .submit-btn:hover {
+                    background-color: #b30600;
+                }
+            }
+        }
+    }
 }
