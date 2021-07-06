@@ -1,18 +1,20 @@
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
-import './assets/scss/index.scss'
+import './assets/scss/index.scss';
 
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Home from './views/Home/Home';
-import Services from './views/Services/Services'
-import Projets from './views/Projets/Projets'
-import Projet from './views/Projet/Projet'
-import Contact from './views/Contact/Contact'
+import Services from './views/Services/Services';
+import Projets from './views/Projets/Projets';
+import Projet from './views/Projet/Projet';
+import Contact from './views/Contact/Contact';
+import Head from './components/Head/Head';
 
 function App() {
   return (
     <main className="App">
+      <Head />
       <Router>
         <Navbar />
         <Switch className="switch">

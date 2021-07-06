@@ -16,8 +16,7 @@ const Footer = () => {
                         <img src={logo} alt="Logo ELECTR-IC" />
                     </div>
                     <p className="footer-text">
-                        Our experienced electricians are highly trained in all aspects of electrical service,
-                        from office lighting and security systems to emergency repair.
+                        Electricien qualifié et expérimenté, je prends en charge tous types de projets, de l'éclairage aux systèmes de sécurité, en passant par les dépannages d'urgence.
                     </p>
                 </section>
 

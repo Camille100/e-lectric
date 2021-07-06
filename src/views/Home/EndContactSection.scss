@@ -53,11 +53,14 @@
             h1 {
                 font-size: 20px;
                 margin-bottom: 30px;
-               
+                overflow: hidden;
+                
                 strong {
-                    
+                    position: relative;
+                    overflow: hidden;
+                    z-index: 0;
                     border-bottom: solid $primary-color 2px;
-                }
+                }       
 
                 @include md {
                     font-size: 27px;
@@ -67,16 +70,21 @@
 
             p {
                 font-size: 16px;
-
+                
                 @include md {
                     font-size: 20px;
                 }
 
                 strong {
-                    background-color: rgb(255, 238, 0);
-                    padding: 2px 5px;
-
+                    position: relative;
+                    content: '';
+                    padding: 2px 4px;
+                    z-index: 0;
                     font-weight: 700;
+                    
+                    background: linear-gradient(to left, $off-white 50%, rgb(255, 238, 0) 50%) right;
+                    background-size: 200%;
+                    transition: .5s ease-out;
                 }
             }
         }
@@ -86,14 +94,16 @@
 
             background-color: $off-white;
             padding: 23px;
-            /* border-radius: 10px; */
+            
             color: #e6120b;
             border: solid 2px #e6120b;
 
+            background: linear-gradient(to left, $off-white 50%, #e6120b 50%) right;
+            background-size: 200%;
+            transition: all 0.5s ease-out;
+
             font-size: 15px;
             font-weight: 700;
-
-            transition: all 0.2s ease-in;
 
             @include sm {
                 margin-top: 0px;
@@ -105,7 +115,7 @@
         }
 
         .btn-contact-end:hover {
-            background-color: #e6120b;
+            background-position: left;
             color: $off-white;
         }
     }

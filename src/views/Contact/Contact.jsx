@@ -17,7 +17,19 @@ function Contact() {
     const handleSubmit = e => {
         e.preventDefault();
 
-        console.log(inputData);
+        //console.log(inputData);
+
+        //////////// sending form data through php //////////////
+
+        fetch('https://sitetest5000.000webhostapp.com/',
+        {
+            method: 'POST',
+            body: JSON.stringify(inputData)
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(err => console.error(err))
+
 
         setInputData({
             name: "",
@@ -35,12 +47,6 @@ function Contact() {
           [e.target.name]: value
         })
     }
-
-
-    
-
-
-
 
 
     return (
@@ -93,8 +99,8 @@ function Contact() {
                     <form onSubmit={handleSubmit}>
                         <input className="name-input inputs" type="text" placeholder="*Nom / prénom" name="name" required onChange={handleChange} value={inputData.name} />
                         <div className="contact-infos">
-                            <input className="tel-input inputs" type="text" placeholder="*Tel." name="tel" required onChange={handleChange} value={inputData.tel} />
-                            <input className="mail-input inputs" type="text" placeholder="Email" name="mail" onChange={handleChange} value={inputData.mail} />
+                            <input className="tel-input inputs" type="text" placeholder="Tel." name="tel" onChange={handleChange} value={inputData.tel} />
+                            <input className="mail-input inputs" type="email" placeholder="*Email" name="mail" required onChange={handleChange} value={inputData.mail} />
                         </div>
                         <textarea className="message-zone inputs" placeholder="*Votre message... " id="" cols="30" rows="8" name="message" required onChange={handleChange} value={inputData.message}></textarea>
                         <p><span>*</span> : champs obligatoires</p>
