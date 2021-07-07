@@ -10,6 +10,7 @@ import Projets from './views/Projets/Projets';
 import Projet from './views/Projet/Projet';
 import Contact from './views/Contact/Contact';
 import Head from './components/Head/Head';
+import Mentions from './views/Mentions/Mentions';
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
           </Route>
           <Route path='/contact'>
             <Contact />
+          </Route>
+          <Route path='/mentions'>
+            <Mentions />
           </Route>
           <Route path='/'>
             <Home />

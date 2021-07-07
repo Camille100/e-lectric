@@ -9,72 +9,73 @@ import EndContactSection from './EndContactSection';
 
 //images
 import presentation from '../../assets/img/presentation.jpg';
+import backgroundImg from '../../assets/img/background_alt.jpg';
 
 
 
 
 function Home() {
 
-//////////////////////////////////// animation bullet points ///////////////////////////////////
-useEffect(() => {
-    const bulletPoints = document.querySelectorAll('.bulletPoints');
-    
-    const animationScrollLeft = (item) => {
-        const viewportHeight = window.innerHeight;
-        const itemPosition = item.getBoundingClientRect().y;
-        if(itemPosition < viewportHeight * 0.80 && item.style.opacity ==0) {
-            item.style.opacity = 1;
-            item.style.transform = "translateX(0px)";
+    //////////////////////////////////// animation bullet points ///////////////////////////////////
+    useEffect(() => {
+        const bulletPoints = document.querySelectorAll('.bulletPoints');
+
+        const animationScrollLeft = (item) => {
+            const viewportHeight = window.innerHeight;
+            const itemPosition = item.getBoundingClientRect().y;
+            if (itemPosition < viewportHeight * 0.80 && item.style.opacity == 0) {
+                item.style.opacity = 1;
+                item.style.transform = "translateX(0px)";
+            }
         }
-    }
 
-    const activatingAnimationScrollLeft = () => {
-        bulletPoints.forEach((bulletPoint) => {
-            window.addEventListener("scroll", animationScrollLeft(bulletPoint));
-            window.addEventListener("resize", animationScrollLeft(bulletPoint));
-            window.addEventListener("load", animationScrollLeft(bulletPoint));
+        const activatingAnimationScrollLeft = () => {
+            bulletPoints.forEach((bulletPoint) => {
+                window.addEventListener("scroll", animationScrollLeft(bulletPoint));
+                window.addEventListener("resize", animationScrollLeft(bulletPoint));
+                window.addEventListener("load", animationScrollLeft(bulletPoint));
 
-        })
-    }
-
-    window.addEventListener("scroll", activatingAnimationScrollLeft);
-
-    return () => {window.removeEventListener("scroll", activatingAnimationScrollLeft)}
-    
-}, [])
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-//////////////////////////////////// animation yellow background ///////////////////////////////////
-useEffect(() => {
-    const strongs = document.querySelectorAll('strong');
-    
-    const animationApparition = (item) => {
-        const viewportHeight = window.innerHeight;
-        const itemPosition = item.getBoundingClientRect().y;
-        if(itemPosition < viewportHeight * 0.80) {
-            item.style.backgroundPosition = "left";
-            item.style.color = "#10272f";
-
+            })
         }
-    }
 
-    const activatingAnimation = () => {
-        strongs.forEach((strong) => {
-            window.addEventListener("scroll", animationApparition(strong));
-            window.addEventListener("resize", animationApparition(strong));
-            window.addEventListener("load", animationApparition(strong));
+        window.addEventListener("scroll", activatingAnimationScrollLeft);
 
-        })
-    }
+        return () => { window.removeEventListener("scroll", activatingAnimationScrollLeft) }
 
-    window.addEventListener("scroll", activatingAnimation);
+    }, [])
 
-    return () => {window.removeEventListener("scroll", activatingAnimation)}
-    
-}, [])
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////// animation yellow background ///////////////////////////////////
+    useEffect(() => {
+        const strongs = document.querySelectorAll('strong');
+
+        const animationApparition = (item) => {
+            const viewportHeight = window.innerHeight;
+            const itemPosition = item.getBoundingClientRect().y;
+            if (itemPosition < viewportHeight * 0.80) {
+                item.style.backgroundPosition = "left";
+                item.style.color = "#10272f";
+
+            }
+        }
+
+        const activatingAnimation = () => {
+            strongs.forEach((strong) => {
+                window.addEventListener("scroll", animationApparition(strong));
+                window.addEventListener("resize", animationApparition(strong));
+                window.addEventListener("load", animationApparition(strong));
+
+            })
+        }
+
+        window.addEventListener("scroll", activatingAnimation);
+
+        return () => { window.removeEventListener("scroll", activatingAnimation) }
+
+    }, [])
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -88,21 +89,71 @@ useEffect(() => {
 
             <section className="slogan">
 
-                <div className="texts">
-                    <h1>Dépannage et <br />installation électrique</h1>
-                    <h2>Metz - Nancy - Verdun</h2>
-                </div>
+                <div className="slogan-container">
 
-                <Link to="/contact" className="button">Nous contacter</Link>
+                    <div className="presentation">
 
-                <div className="infos">
-                    <h1><a href="tel:+33640351107">Tel : 06 40 35 11 07</a></h1>
-                    <a href="mail:electr-ic@orange.fr">electr-ic@orange.fr</a>
-                    <p>
-                        <span className="gras">Horaires d'ouverture:</span><br />
-                        Lundi - Vendredi: 8h - 12h & 13 - 18h<br />
-                        Samedi - Dimanche : Fermé
-                    </p>
+                        <header>
+                            <h1 className="sloganJaune">DÉPANNAGES ET</h1><br />
+                            <h1 className="sloganBlanc">TRAVAUX DE RENOVATION</h1>
+                        </header>
+
+                        <article>
+
+                            <div className="sloganArgument">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 405.3 405.3">
+                                    <path d="M393 124L180 338a41 41 0 01-58 0L12 228a41 41 0 0157-58l82 82L336 67a41 41 0 0157 57z" />
+                                </svg>
+
+                                <span>Devis détaillé gratuit</span>
+                            </div>
+
+                            <div className="sloganArgument">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 405.3 405.3">
+                                    <path d="M393 124L180 338a41 41 0 01-58 0L12 228a41 41 0 0157-58l82 82L336 67a41 41 0 0157 57z" />
+                                </svg>
+
+                                <span>Travaux professionnels de qualité</span>
+                            </div>
+
+                            <div className="sloganArgument">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 405.3 405.3">
+                                    <path d="M393 124L180 338a41 41 0 01-58 0L12 228a41 41 0 0157-58l82 82L336 67a41 41 0 0157 57z" />
+                                </svg>
+
+                                <span>Intervention rapide</span>
+                            </div>
+
+                            <div className="sloganArgument">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 405.3 405.3">
+                                    <path d="M393 124L180 338a41 41 0 01-58 0L12 228a41 41 0 0157-58l82 82L336 67a41 41 0 0157 57z" />
+                                </svg>
+
+                                <span>Artisan qualifié</span>
+                            </div>
+
+                        </article>
+
+                        <div className="buttonContainer">
+                            <a href="tel:+33640351107">
+                                <div>
+
+                                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" data-name="Layer 3">
+                                        <path d="M30 22.6s-6-4.4-7.6-4c-.8 0-1.3.6-2.2 1.7l-.7.9a12.5 12.5 0 01-1.7-.7 13.7 13.7 0 01-6.3-6.3 12.5 12.5 0 01-.7-1.7l1-.7c1-1 1.5-1.4 1.7-2.2.2-1.6-4-7.6-4-7.6a2.3 2.3 0 00-1.8-1C6 1 1 7.4 1 8.5 1 8.5 1 15 9 23s14.4 8 14.5 8c1 0 7.5-5 7.5-6.7a2.3 2.3 0 00-1-1.7z" />
+                                    </svg>
+
+                                    06 25 70 06 73
+
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div className="background-img">
+                        <img src={backgroundImg} alt="" />
+                    </div>
+
                 </div>
 
             </section>

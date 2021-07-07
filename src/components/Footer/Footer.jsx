@@ -1,5 +1,6 @@
 import React from 'react';
 import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 
 import './Footer.scss';
 import logo from '../../assets/img/logo.png';
@@ -61,6 +62,10 @@ const Footer = () => {
                 </section>
 
             </div>
+
+            <section className="mentions">
+                <Link to="/mentions"> Mentions légales</Link>
+            </section>
 
         </div>
     )

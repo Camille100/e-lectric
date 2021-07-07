@@ -3,12 +3,13 @@
 .contact {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    
     color: #6d6d6d;
-    min-height: calc(100vh - 350px);
+    min-height: calc(100vh - 390px);
     
     .contact-presentation-txt {
 
-        margin-top: 50px;
         margin-bottom: 15px;
         margin-right: auto;
         margin-left: auto;
@@ -45,7 +46,6 @@
         align-items: center;
 
         margin-top: 20px;
-        margin-bottom: 20px;
 
         font-family: Titillium Web;
 

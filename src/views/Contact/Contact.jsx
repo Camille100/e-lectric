@@ -1,8 +1,9 @@
 import React from 'react';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import './Contact.scss';
 
 import map from '../../assets/img/map.png'
+
 
 function Contact() {
 
@@ -13,30 +14,49 @@ function Contact() {
         message:""
     })
 
+    const [displayForm, setDisplayForm] = useState(true);
+    const [handleSubmitState, setHandleSubmitState] = useState(false);
+
+
+    if(handleSubmitState) {
+        const submitBtn = document.querySelector('.submit-btn');
+        submitBtn.disabled = true;
+    }
     
     const handleSubmit = e => {
+        setHandleSubmitState(true);
         e.preventDefault();
 
+        setTimeout(() => {
+            
+            //////////// sending form data through php //////////////
+            fetch('http://localhost/mailing_electr-ic/',
+            {
+                method: 'POST',
+                body: JSON.stringify(inputData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+                setDisplayForm(false)
+            })
+            .catch(err => console.error(err))
+    
+    
+            setInputData({
+                name: "",
+                tel: "",
+                mail: "",
+                message:""
+            }); 
+    
+        }, 5000)
+        
         //console.log(inputData);
 
-        //////////// sending form data through php //////////////
+        
 
-        fetch('https://sitetest5000.000webhostapp.com/',
-        {
-            method: 'POST',
-            body: JSON.stringify(inputData)
-        })
-        .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(err => console.error(err))
-
-
-        setInputData({
-            name: "",
-            tel: "",
-            mail: "",
-            message:""
-        }); 
+        
     }
 
     const handleChange = e => {
@@ -95,7 +115,7 @@ function Contact() {
                 </div>
 
                 <div className="contact-form">
-
+                {displayForm &&
                     <form onSubmit={handleSubmit}>
                         <input className="name-input inputs" type="text" placeholder="*Nom / prénom" name="name" required onChange={handleChange} value={inputData.name} />
                         <div className="contact-infos">
@@ -104,9 +124,12 @@ function Contact() {
                         </div>
                         <textarea className="message-zone inputs" placeholder="*Votre message... " id="" cols="30" rows="8" name="message" required onChange={handleChange} value={inputData.message}></textarea>
                         <p><span>*</span> : champs obligatoires</p>
-                        <input className="submit-btn inputs" type="submit" value="ENVOYER" />
+                        <input className="submit-btn inputs" type="submit" value="ENVOYER" disabled={false} />
                     </form>
-
+                }
+                {!displayForm &&
+                    <p>Votre message a bien été envoyé</p>
+                }
                 </div>
 
             </div>
