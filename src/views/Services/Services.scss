@@ -37,6 +37,8 @@
             max-width: 900px;
             flex-direction: row;
 
+            margin-left: 20px;
+            margin-right: 20px;
             margin-top: 60px;
             margin-bottom: 60px;
 
@@ -46,7 +48,7 @@
         }
 
         @include xl {
-            max-width: 1400px;
+            max-width: 1200px;
         }
 
         .service-text {
