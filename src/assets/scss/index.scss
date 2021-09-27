@@ -9,15 +9,12 @@ html{
     margin:0 !important;
     margin-top:0 !important;
     font-size:100%;
-    background:$off-white;
+    background:white;
     -webkit-text-size-adjust:none;
 
     
     font-family: 'Raleway', sans-serif;
 
-    // font-weight: 300;
-    // font-style: normal;
-    // font-weight: normal;
     font-variant: normal;
     text-transform: none;
     line-height: 1;
@@ -36,12 +33,6 @@ html{
       font-size:120%;
     }
   
-    // @include sm{font-size:70%;}
-    // @include md{font-size:77%;}
-    // @include lg{font-size:87%;}
-    // @include xl{font-size:100%;}
-    // @include xxl{font-size:120%;}
-    // @include xxxl{font-size:150%;}
   }
 
   *:focus {
@@ -68,12 +59,8 @@ html{
   h1,h2,h3,h4,h5,h6,p{
     margin:0;
     padding:0;
-
   }
 
-  p{
- 
-  }
   
   button{
     border: none;
