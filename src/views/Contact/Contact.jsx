@@ -28,7 +28,7 @@ function Contact() {
         e.preventDefault();
 
         //////////// sending form data through php //////////////
-        fetch('http://localhost/mailing_electr-ic/',
+        fetch('http://localhost/mailing_electr-ic/', //replace
             {
                 method: 'POST',
                 body: JSON.stringify(inputData)
@@ -47,14 +47,7 @@ function Contact() {
             mail: "",
             message: ""
         });
-
-
-
         //console.log(inputData);
-
-
-
-
     }
 
     const handleChange = e => {
